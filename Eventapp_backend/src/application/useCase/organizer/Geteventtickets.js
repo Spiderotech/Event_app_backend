@@ -1,0 +1,20 @@
+
+
+const Geteventtickets = async (Id,repositories) => {
+
+
+    console.log(Id,"usecasse");
+    
+    try {
+
+        const profiledata =await repositories.getalleventtickets(Id)
+       
+
+        return { status: true, profiledata }
+
+    } catch {
+        return { message: 'Error getting user profile', status: false };
+
+    }
+}
+export default Geteventtickets
